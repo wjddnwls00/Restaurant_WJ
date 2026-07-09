@@ -1,0 +1,1526 @@
+/* ==========================================
+   Restaurant WJ
+   Private Dining Experience
+   style.css
+========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    background:#F7F3EE;
+
+    font-family:'Noto Serif KR',serif;
+
+    color:#2F2F2F;
+
+    overflow:hidden;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    min-height:100vh;
+
+}
+
+/* =========================
+   Background
+========================= */
+
+.background{
+
+    position:fixed;
+
+    inset:0;
+
+    background:
+    linear-gradient(
+        135deg,
+        #faf7f3,
+        #f3ede4
+    );
+
+    z-index:-10;
+
+}
+
+/* =========================
+   Main Card
+========================= */
+
+.container{
+
+    position:relative;
+
+    width:92%;
+
+    max-width:720px;
+
+    height:92vh;
+
+    background:white;
+
+    border-radius:32px;
+
+    box-shadow:
+
+        0 25px 60px rgba(0,0,0,.12);
+
+    overflow:hidden;
+
+    padding:45px;
+
+}
+
+/* =========================
+   Logo
+========================= */
+
+.logo{
+
+    text-align:center;
+
+    margin-bottom:18px;
+
+}
+
+.logo h3{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:48px;
+
+    color:#B08D57;
+
+    font-weight:600;
+
+    letter-spacing:8px;
+
+}
+
+.logo p{
+
+    font-size:13px;
+
+    color:#777;
+
+    letter-spacing:4px;
+
+    text-transform:uppercase;
+
+}
+
+/* =========================
+   Progress
+========================= */
+
+.progress{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:30px;
+
+}
+
+.progress-text{
+
+    color:#888;
+
+    font-size:14px;
+
+}
+
+.dots{
+
+    display:flex;
+
+    gap:10px;
+
+}
+
+.dot{
+
+    width:12px;
+
+    height:12px;
+
+    border-radius:50%;
+
+    background:#ddd;
+
+    transition:.3s;
+
+}
+
+.dot.active{
+
+    background:#B08D57;
+
+}
+
+/* =========================
+   Page
+========================= */
+
+.page{
+
+    display:none;
+
+    width:100%;
+
+    height:100%;
+
+    animation:fade .5s;
+
+}
+
+.page.active{
+
+    display:block;
+
+}
+/* =========================
+   Title
+========================= */
+
+h1{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:56px;
+
+    font-weight:600;
+
+    color:#B08D57;
+
+    text-align:center;
+
+    margin-top:15px;
+
+    letter-spacing:1px;
+
+}
+
+h2{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:28px;
+
+    font-weight:500;
+
+    color:#555;
+
+    text-align:center;
+
+    margin-top:12px;
+
+}
+
+/* =========================
+   Course
+========================= */
+
+.course{
+
+    text-align:center;
+
+    color:#B08D57;
+
+    font-size:15px;
+
+    letter-spacing:4px;
+
+    text-transform:uppercase;
+
+    margin-top:35px;
+
+}
+
+/* =========================
+   Description
+========================= */
+
+.description{
+
+    margin-top:45px;
+
+    text-align:center;
+
+    line-height:2;
+
+    font-size:19px;
+
+    color:#444;
+
+}
+
+/* =========================
+   Line
+========================= */
+
+.line{
+
+    width:130px;
+
+    height:1px;
+
+    background:#D7C29B;
+
+    margin:35px auto;
+
+}
+
+/* =========================
+   Reservation
+========================= */
+
+.reservation{
+
+    margin-top:45px;
+
+    text-align:center;
+
+    line-height:2;
+
+    font-size:19px;
+
+}
+
+.reservation strong{
+
+    color:#B08D57;
+
+    font-size:25px;
+
+    font-family:'Cormorant Garamond',serif;
+
+}
+
+/* =========================
+   Chef Note
+========================= */
+
+.chef-note{
+
+    margin-top:45px;
+
+    text-align:center;
+
+    color:#777;
+
+    font-style:italic;
+
+    line-height:1.9;
+
+    font-size:16px;
+
+}
+
+/* =========================
+   Start Button
+========================= */
+
+.start-btn{
+
+    display:block;
+
+    margin:65px auto 0;
+
+    padding:18px 55px;
+
+    border:none;
+
+    border-radius:18px;
+
+    background:#B08D57;
+
+    color:white;
+
+    font-size:19px;
+
+    font-family:'Noto Serif KR',serif;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+.start-btn:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:
+
+        0 12px 30px rgba(176,141,87,.28);
+
+}
+
+.start-btn:active{
+
+    transform:scale(.98);
+
+}
+/* =========================
+   Course Button
+========================= */
+
+.course-btn{
+
+    position:absolute;
+
+    top:35px;
+
+    right:35px;
+
+    border:none;
+
+    background:#B08D57;
+
+    color:white;
+
+    padding:14px 28px;
+
+    border-radius:16px;
+
+    font-size:15px;
+
+    font-family:'Noto Serif KR',serif;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+    box-shadow:
+
+        0 10px 25px rgba(176,141,87,.25);
+
+}
+
+.course-btn:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:
+
+        0 14px 30px rgba(176,141,87,.35);
+
+}
+
+.course-btn:active{
+
+    transform:scale(.98);
+
+}
+
+/* =========================
+   Last Course Button
+========================= */
+
+.finish-btn{
+
+    background:#8C6A3E;
+
+}
+
+.finish-btn:hover{
+
+    background:#7A5A33;
+
+}
+
+/* =========================
+   Staff Bell
+========================= */
+
+.bell-btn{
+
+    position:absolute;
+
+    right:24px;
+
+    bottom:24px;
+
+    background:transparent;
+
+    border:none;
+
+    color:#888;
+
+    font-size:13px;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+    padding:6px 10px;
+
+    border-radius:8px;
+
+}
+
+.bell-btn:hover{
+
+    color:#B08D57;
+
+    background:rgba(176,141,87,.08);
+
+}
+
+.bell-btn:active{
+
+    transform:scale(.95);
+
+}
+
+/* =========================
+   Disabled Button
+========================= */
+
+.course-btn.loading{
+
+    background:#999;
+
+    cursor:wait;
+
+    pointer-events:none;
+
+}
+/* =========================
+   Preparing Page
+========================= */
+
+.preparing-page{
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    height:100%;
+
+}
+
+/* =========================
+   Preparing Title
+========================= */
+
+.preparing-page h1{
+
+    margin-top:40px;
+
+    font-size:60px;
+
+    color:#B08D57;
+
+}
+
+.preparing-page .description{
+
+    margin-top:35px;
+
+    font-size:22px;
+
+    line-height:2;
+
+    color:#555;
+
+}
+
+/* =========================
+   Loading Dots
+========================= */
+
+.loading-dots{
+
+    display:flex;
+
+    gap:16px;
+
+    margin-top:60px;
+
+}
+
+.loading-dots span{
+
+    width:16px;
+
+    height:16px;
+
+    border-radius:50%;
+
+    background:#D6C19A;
+
+    animation:loading 1.2s infinite;
+
+}
+
+.loading-dots span:nth-child(2){
+
+    animation-delay:.2s;
+
+}
+
+.loading-dots span:nth-child(3){
+
+    animation-delay:.4s;
+
+}
+
+/* =========================
+   Loading Animation
+========================= */
+
+@keyframes loading{
+
+    0%{
+
+        transform:translateY(0);
+
+        opacity:.3;
+
+    }
+
+    50%{
+
+        transform:translateY(-12px);
+
+        opacity:1;
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+        opacity:.3;
+
+    }
+
+}
+
+/* =========================
+   Fade Animation
+========================= */
+
+@keyframes fade{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(15px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+/* =========================
+   Thank You Page
+========================= */
+
+.heart{
+
+    margin-top:45px;
+
+    text-align:center;
+
+    font-size:72px;
+
+    color:#B08D57;
+
+    animation:heartBeat 2s infinite;
+
+}
+
+/* =========================
+   Chef
+========================= */
+
+.chef{
+
+    margin-top:35px;
+
+    text-align:center;
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:34px;
+
+    color:#B08D57;
+
+    letter-spacing:3px;
+
+    line-height:1.8;
+
+}
+
+/* =========================
+   Heart Animation
+========================= */
+
+@keyframes heartBeat{
+
+    0%{
+
+        transform:scale(1);
+
+    }
+
+    50%{
+
+        transform:scale(1.12);
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+    }
+
+}
+
+/* =========================
+   Thank You Fade
+========================= */
+
+.thankyou-show{
+
+    animation:thankFade 1s ease;
+
+}
+
+@keyframes thankFade{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(20px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+/* =========================
+   Popup Overlay
+========================= */
+
+.popup{
+
+    position:fixed;
+
+    top:50%;
+
+    left:50%;
+
+    transform:translate(-50%,-50%) scale(.9);
+
+    width:340px;
+
+    max-width:90%;
+
+    background:#ffffff;
+
+    border-radius:24px;
+
+    padding:32px 28px;
+
+    text-align:center;
+
+    box-shadow:
+        0 20px 60px rgba(0,0,0,.18);
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:
+        opacity .3s ease,
+        transform .3s ease,
+        visibility .3s;
+
+    z-index:9999;
+
+}
+
+/* 표시될 때 */
+
+.popup.show{
+
+    opacity:1;
+
+    visibility:visible;
+
+    transform:translate(-50%,-50%) scale(1);
+
+}
+
+/* =========================
+   Popup Title
+========================= */
+
+.popup h2{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:34px;
+
+    color:#B08D57;
+
+    margin-bottom:16px;
+
+}
+
+/* =========================
+   Popup Text
+========================= */
+
+.popup p{
+
+    font-size:17px;
+
+    color:#555;
+
+    line-height:1.8;
+
+}
+
+/* =========================
+   Popup Blur
+========================= */
+
+body.popup-open .container{
+
+    filter:blur(3px);
+
+    transition:.3s;
+
+}
+
+body.popup-open{
+
+    overflow:hidden;
+
+}
+/* =========================
+   Chef Mode Overlay
+========================= */
+
+.chef-mode{
+
+    position:fixed;
+
+    inset:0;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:rgba(0,0,0,.45);
+
+    backdrop-filter:blur(6px);
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:.3s;
+
+    z-index:10000;
+
+}
+
+.chef-mode.show{
+
+    opacity:1;
+
+    visibility:visible;
+
+}
+
+/* =========================
+   Chef Window
+========================= */
+
+.chef-window{
+
+    width:420px;
+
+    max-width:90%;
+
+    background:white;
+
+    border-radius:24px;
+
+    padding:35px;
+
+    text-align:center;
+
+    box-shadow:
+        0 20px 50px rgba(0,0,0,.25);
+
+}
+
+.chef-window h2{
+
+    font-family:'Cormorant Garamond',serif;
+
+    color:#B08D57;
+
+    font-size:38px;
+
+    margin-bottom:15px;
+
+}
+
+.chef-window p{
+
+    color:#666;
+
+    margin-bottom:25px;
+
+    line-height:1.8;
+
+}
+
+/* =========================
+   Password Input
+========================= */
+
+#chefPassword{
+
+    width:100%;
+
+    padding:14px 16px;
+
+    border:2px solid #DDD;
+
+    border-radius:12px;
+
+    font-size:16px;
+
+    outline:none;
+
+    transition:.25s;
+
+}
+
+#chefPassword:focus{
+
+    border-color:#B08D57;
+
+}
+
+/* =========================
+   Chef Buttons
+========================= */
+
+#chefLogin,
+#chefClose{
+
+    margin-top:18px;
+
+    width:100%;
+
+    padding:14px;
+
+    border:none;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+    font-family:'Noto Serif KR',serif;
+
+    transition:.25s;
+
+}
+
+#chefLogin{
+
+    background:#B08D57;
+
+    color:white;
+
+}
+
+#chefLogin:hover{
+
+    background:#9C7948;
+
+}
+
+#chefClose{
+
+    background:#ECECEC;
+
+    color:#555;
+
+}
+
+#chefClose:hover{
+
+    background:#DDDDDD;
+
+}
+/* =========================
+   iPad Optimization
+========================= */
+
+@media screen and (max-width:900px){
+
+    body{
+
+        align-items:center;
+
+    }
+
+
+    .container{
+
+        width:94%;
+
+        height:94vh;
+
+        padding:35px;
+
+        border-radius:28px;
+
+    }
+
+
+    .logo h3{
+
+        font-size:42px;
+
+    }
+
+
+    h1{
+
+        font-size:48px;
+
+    }
+
+
+    h2{
+
+        font-size:25px;
+
+    }
+
+
+    .description{
+
+        font-size:17px;
+
+        margin-top:35px;
+
+    }
+
+
+    .course-btn{
+
+        top:25px;
+
+        right:25px;
+
+        padding:12px 20px;
+
+        font-size:14px;
+
+    }
+
+
+    .bell-btn{
+
+        right:18px;
+
+        bottom:18px;
+
+        font-size:12px;
+
+    }
+
+}
+
+
+/* =========================
+   Smaller Mobile
+========================= */
+
+@media screen and (max-width:500px){
+
+    .container{
+
+        width:96%;
+
+        height:96vh;
+
+        padding:25px;
+
+    }
+
+
+    .logo h3{
+
+        font-size:36px;
+
+    }
+
+
+    h1{
+
+        font-size:38px;
+
+    }
+
+
+    h2{
+
+        font-size:22px;
+
+    }
+
+
+    .description{
+
+        font-size:15px;
+
+    }
+
+
+    .course-btn{
+
+        position:relative;
+
+        top:auto;
+
+        right:auto;
+
+        display:block;
+
+        margin:0 auto 25px;
+
+    }
+
+
+    .bell-btn{
+
+        right:12px;
+
+        bottom:12px;
+
+    }
+
+
+    .start-btn{
+
+        padding:15px 40px;
+
+        font-size:16px;
+
+    }
+
+}
+
+
+/* =========================
+   Landscape iPad
+========================= */
+
+@media screen and (orientation:landscape){
+
+    .container{
+
+        max-width:1000px;
+
+        height:90vh;
+
+    }
+
+}
+/* =========================
+   Luxury Details
+========================= */
+
+
+/* Container Detail */
+
+.container::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:18px;
+
+    border:1px solid rgba(176,141,87,.25);
+
+    border-radius:24px;
+
+    pointer-events:none;
+
+}
+
+
+/* =========================
+   Elegant Text
+========================= */
+
+h1,
+h2,
+.logo h3,
+.chef{
+
+    letter-spacing:1.5px;
+
+}
+
+
+.description{
+
+    font-weight:300;
+
+}
+
+
+/* =========================
+   Gold Shine Button
+========================= */
+
+.course-btn,
+.start-btn{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+
+.course-btn::after,
+.start-btn::after{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-100%;
+
+    width:60%;
+
+    height:100%;
+
+    background:
+
+    linear-gradient(
+
+        120deg,
+
+        transparent,
+
+        rgba(255,255,255,.45),
+
+        transparent
+
+    );
+
+    transition:.5s;
+
+}
+
+
+.course-btn:hover::after,
+.start-btn:hover::after{
+
+    left:120%;
+
+}
+
+
+/* =========================
+   Touch Effect
+========================= */
+
+button{
+
+    -webkit-tap-highlight-color:transparent;
+
+}
+
+
+button:active{
+
+    opacity:.85;
+
+}
+
+
+/* =========================
+   Smooth Page
+========================= */
+
+.page{
+
+    position:relative;
+
+}
+
+
+.page.active{
+
+    animation:
+
+    pageEnter .6s ease;
+
+}
+
+
+@keyframes pageEnter{
+
+    from{
+
+        opacity:0;
+
+        transform:
+
+        translateX(30px);
+
+    }
+
+
+    to{
+
+        opacity:1;
+
+        transform:
+
+        translateX(0);
+
+    }
+
+}
+
+
+/* =========================
+   Gold Divider
+========================= */
+
+.line{
+
+    position:relative;
+
+}
+
+
+.line::before,
+.line::after{
+
+    content:"";
+
+    position:absolute;
+
+    top:50%;
+
+    width:45px;
+
+    height:1px;
+
+    background:#D7C29B;
+
+}
+
+
+.line::before{
+
+    right:100%;
+
+    margin-right:15px;
+
+}
+
+
+.line::after{
+
+    left:100%;
+
+    margin-left:15px;
+
+}
+/* =========================
+   Final Adjustment
+========================= */
+
+
+/* Prevent Selection */
+
+*{
+
+    -webkit-user-select:none;
+
+    user-select:none;
+
+}
+
+
+/* =========================
+   Safari iPad Fix
+========================= */
+
+body{
+
+    -webkit-touch-callout:none;
+
+    -webkit-text-size-adjust:100%;
+
+}
+
+
+/* =========================
+   Full Screen Feel
+========================= */
+
+.container{
+
+    isolation:isolate;
+
+}
+
+
+/* =========================
+   Button Cursor
+========================= */
+
+button{
+
+    outline:none;
+
+}
+
+
+/* =========================
+   Audio Hidden
+========================= */
+
+audio{
+
+    display:none;
+
+}
+
+
+/* =========================
+   Loading Smooth
+========================= */
+
+.loading-dots span{
+
+    will-change:transform,opacity;
+
+}
+
+
+/* =========================
+   Popup Mobile
+========================= */
+
+@media screen and (max-width:600px){
+
+    .popup{
+
+        width:85%;
+
+        padding:25px 20px;
+
+    }
+
+
+    .popup h2{
+
+        font-size:28px;
+
+    }
+
+
+    .popup p{
+
+        font-size:15px;
+
+    }
+
+
+    .chef-window{
+
+        width:90%;
+
+        padding:25px;
+
+    }
+
+
+    .chef-window h2{
+
+        font-size:30px;
+
+    }
+
+}
+
+
+/* =========================
+   Print Disable
+========================= */
+
+@media print{
+
+    body{
+
+        display:none;
+
+    }
+
+}

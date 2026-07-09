@@ -1,0 +1,23 @@
+{
+    "name": "Restaurant WJ",
+    "short_name": "Restaurant WJ",
+    "description": "Private Dining Experience",
+
+    "start_url": "./index.html",
+
+    "display": "standalone",
+
+    "background_color": "#F7F3EE",
+
+    "theme_color": "#B08D57",
+
+    "orientation": "portrait",
+
+    "icons": [
+        {
+            "src": "icon.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}
